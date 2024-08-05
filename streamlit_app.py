@@ -34,5 +34,5 @@ if (name_text and client_name_text and job_title_text and examples_text and exam
              cover_letter.my_contribution_to_the_project() + cover_letter.call_to_action() + cover_letter.closing())
 
 else:
-    st.write("Complete the required info")
+    st.write("Complete the required info ")
 
