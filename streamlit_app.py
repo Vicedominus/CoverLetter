@@ -3,6 +3,11 @@ from proposal.cover_letter import CoverLetter
 
 from dotenv import load_dotenv
 
+__import__('pysqlite3')
+import sys
+
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 load_dotenv()
 
 st.write("Upwork Cover Letter Generator")
