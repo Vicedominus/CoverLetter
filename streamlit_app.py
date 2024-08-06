@@ -1,14 +1,21 @@
+import sqlite3
+
 import streamlit as st
 from proposal.cover_letter import CoverLetter
 
 from dotenv import load_dotenv
 
-__import__('pysqlite')
-import sys
+from streamlit import logger
 
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite')
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 load_dotenv()
+
+app_logger = logger.get_logger('SMI_APP')
+app_logger.info(f"sqlite version: {sqlite3.version}")
+app_logger.info(f"sys version: {sys.version}")
 
 st.write("Upwork Cover Letter Generator")
 
