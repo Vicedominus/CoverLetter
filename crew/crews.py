@@ -81,7 +81,7 @@ def get_cover_letter(name, client_name, job_title, profile, job_post, symbol="<>
         description="This is your profile: {profile}, and with that profile you have to apply for this job post: {job_post} posting"
                     "by {client_name}",
         agent=agent,
-        expected_output='Your application in its final version',
+        expected_output='Your application in its final version in no more than 200 words',
     )
 
     inputs = {
