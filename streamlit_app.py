@@ -1,6 +1,8 @@
 import streamlit as st
 import openai
 
+import os
+
 from crew.crews import get_cover_letter
 
 st.write("Upwork Cover Letter Generator")
@@ -15,7 +17,7 @@ OPENAI_API_KEY = st.sidebar.text_input("Your OpenAI api key", key="api_key", pla
 
 if (name_text and client_name_text and profile_text and job_post_text and OPENAI_API_KEY):
     # Asignar la clave de API directamente
-    openai.api_key = st.session_state.api_key
+    os.environ['OPENAI_API_KEY'] = st.session_state.api_key
     name = st.session_state.name
     client_name = st.session_state.client_name
     job_title = st.session_state.job_title
