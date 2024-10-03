@@ -5,7 +5,7 @@ import os
 
 from crew.crews import get_cover_letter
 
-st.write("Upwork Cover Letter Generator")
+st.write("Cover Letter Generator")
 
 # Get info for the cover letter
 name_text = st.sidebar.text_input("Your Name", key="name")
