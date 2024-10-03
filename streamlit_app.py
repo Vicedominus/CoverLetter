@@ -22,7 +22,7 @@ if (name_text and client_name_text and profile_text and job_post_text and OPENAI
     profile = st.session_state.profile
     job_post = st.session_state.job_post
 
-    cover_letter = get_cover_letter(name, client_name, job_title, profile, job_post, symbol="<>")
+    cover_letter = get_cover_letter(name, client_name, job_title, profile, job_post)
     st.write(cover_letter)
 else:
     st.write("Complete the required info")
